@@ -26,9 +26,12 @@ gleam test  # Run the tests
 ## Gladvent
 
 https://hexdocs.pm/gladvent/index.html
+```bash
+run gleam run new 1
+add your input to input/<YEAR>/day_1.txt
+add your code to src/aoc_<YEAR>/day_1.gleam
+run gleam run run 1
+run gleam run run 1 --year=YEAR
+```
 
-run gleam run new X
-add your input to input/<YEAR>/day_X.txt
-add your code to src/aoc_<YEAR>/day_X.gleam
-run gleam run run X
 
