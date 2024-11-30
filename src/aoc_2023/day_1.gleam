@@ -10,16 +10,13 @@ pub fn parse(input: String) -> List(String) {
 }
 
 pub fn pt_1(input: List(String)) -> Int {
-  let result: Int =
-    input
-    |> list.map(strip_chars)
-    |> list.map(fn(value) -> Int {
-      let assert Ok(i) = int.parse(value)
-      i
-    })
-    |> sum_list(0)
-
-  result
+  input
+  |> list.map(strip_chars)
+  |> list.map(fn(value) -> Int {
+    let assert Ok(i) = int.parse(value)
+    i
+  })
+  |> int.sum
 }
 
 pub fn strip_chars(input: String) -> String {
