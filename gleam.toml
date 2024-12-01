@@ -22,8 +22,8 @@ gleeunit = ">= 1.0.0 and < 2.0.0"
 
 
 [gladvent.2024.1]
-pt_1 = 2
-pt_2 = 3
+pt_1 = 11
+pt_2 = 31
 
 [gladvent.2023.1]
 pt_1 = 142
