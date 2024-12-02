@@ -15,12 +15,8 @@ pub fn pt_1(input: List(List(Int))) -> Int {
       |> list.map(fn(a) -> Int {
         let num = a.1 - a.0
         case num {
-          -1 -> -1
-          -2 -> -1
-          -3 -> -1
-          1 -> 1
-          2 -> 1
-          3 -> 1
+          -1 | -2 | -3 -> -1
+          1 | 2 | 3 -> 1
           _ -> 0
         }
       })
@@ -37,7 +33,32 @@ pub fn pt_1(input: List(List(Int))) -> Int {
 }
 
 pub fn pt_2(input: List(List(Int))) {
-  todo as "part 2 not implemented"
+  input
+  |> list.map(fn(row) -> Bool {
+    list.combinations(row, list.length(row) - 1)
+    |> list.map(fn(row_permutaion) {
+      let result =
+        list.window_by_2(row_permutaion)
+        |> list.map(fn(a) -> Int {
+          let num = a.1 - a.0
+          case num {
+            -1 | -2 | -3 -> -1
+            1 | 2 | 3 -> 1
+            _ -> 0
+          }
+        })
+        |> int.sum
+      let abs_result = int.absolute_value(result)
+      let length = list.length(row_permutaion) - 1
+
+      case abs_result == length {
+        True -> 1
+        _ -> 0
+      }
+    })
+    |> list.any(fn(x) { x == 1 })
+  })
+  |> list.count(fn(value) { value == True })
 }
 
 pub fn get_rows(input: String) -> List(List(Int)) {
