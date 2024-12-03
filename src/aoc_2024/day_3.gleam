@@ -1,10 +1,10 @@
 import gleam/int
-import gleam/io
 import gleam/list
 import gleam/regexp
+import gleam/string
 
 pub fn parse(input: String) -> String {
-  input
+  string.replace(input, "\n", "")
 }
 
 pub fn pt_1(input: String) -> Int {
