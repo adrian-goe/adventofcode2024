@@ -25,15 +25,18 @@ gleeunit = ">= 1.0.0 and < 2.0.0"
 pt_1 = 11
 pt_2 = 31
 
-
 [gladvent.2024.2]
 pt_1 = 2
 pt_2 = 4
 
-
 [gladvent.2024.3]
 pt_1 = 161
 pt_2 = 48
+
+[gladvent.2024.4]
+pt_1 = 18
+pt_2 = 9
+
 
 [gladvent.2023.1]
 pt_1 = 142
