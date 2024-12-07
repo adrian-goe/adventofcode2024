@@ -15,25 +15,24 @@ pub fn pt_1(input: List(String)) {
   let parsed_first = pasre_first(first)
   let parsed_second = parse_second(last)
 
-  //  let filtered =
-  //    parsed_second
-  //    |> list.filter(fn(row) {
-  //      let row_filtered =
-  //        row
-  //        |> list.map(fn(cell) {
-  //          let numbers =
-  //            parsed_first
-  //            |> find_page_requirements(cell)
-  //
-  //          filter_test(row, cell, numbers)
-  //        })
-  //      io.debug(row_filtered)
-  //      !list.contains(row_filtered, False)
-  //    })
-  //
-  //  find_middle_number(filtered)
-  //  |> int.sum
-  1
+  let filtered =
+    parsed_second
+    |> list.filter(fn(row) {
+      let row_filtered =
+        row
+        |> list.map(fn(cell) {
+          let numbers =
+            parsed_first
+            |> find_page_requirements(cell)
+
+          filter_test(row, cell, numbers)
+        })
+      io.debug(row_filtered)
+      !list.contains(row_filtered, False)
+    })
+
+  find_middle_number(filtered)
+  |> int.sum
 }
 
 pub fn pt_2(input: List(String)) -> Int {
