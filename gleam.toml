@@ -22,6 +22,9 @@ birl = ">= 1.7.1 and < 2.0.0"
 [dev-dependencies]
 gleeunit = ">= 1.0.0 and < 2.0.0"
 
+[gladvent.2023.1]
+pt_1 = 142
+pt_2 = 3
 
 [gladvent.2024.1]
 pt_1 = 11
@@ -47,6 +50,6 @@ pt_2 = 123
 pt_1 = 41
 pt_2 = 6
 
-[gladvent.2023.1]
-pt_1 = 142
-pt_2 = 3
+[gladvent.2024.7]
+pt_1 = 3749
+pt_2 = 11387
